@@ -1,0 +1,46 @@
+name: AIOEconomy
+version: 0.1.0
+main: com.example.aioeconomy.AIOEconomyPlugin
+api-version: '1.21'
+author: Prototype
+description: All-in-one economy, shop, auction house, selling and trading plugin.
+
+commands:
+  sell:
+    description: Sell items from your inventory.
+    usage: /sell <hand|allhand>
+  shop:
+    description: Open the server shop.
+    usage: /shop <section>
+  ah:
+    description: Auction house.
+    usage: /ah [sell|search]
+  pay:
+    description: Pay another player.
+    usage: /pay <player> <amount>
+  bal:
+    description: View your balance.
+    usage: /bal
+    aliases: [balance]
+  baltop:
+    description: View the richest players.
+    usage: /baltop
+  trade:
+    description: Trade with another player.
+    usage: /trade <player>
+  shopadd:
+    description: Manage the server shop.
+    usage: /shopadd section <name> OR /shopadd item <buyprice> <sellprice> [section]
+  shopremove:
+    description: Remove an item from a server shop section.
+    usage: /shopremove <item> <section>
+    permission: aioeconomy.admin
+  balset:
+    description: Set a player's balance.
+    usage: /balset <player> <amount>
+    permission: aioeconomy.admin
+
+permissions:
+  aioeconomy.admin:
+    description: Access AIOEconomy admin commands.
+    default: op
